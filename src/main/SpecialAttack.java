@@ -1,3 +1,5 @@
+package main;
+
 public enum SpecialAttack {
     HAMMER_OF_JUSTICE("Hammer of Justice"),
     DEMONIC_EMBRACE("Demonic Embrace");

@@ -1,9 +1,9 @@
+package main;
+
 public class Warrior extends Fighter {
 
-    //private static final int MAX_HP = 100;
-
-    public Warrior(String name, int health, int attackPower) {
-        super(name, health, attackPower);
+    public Warrior(String name, int health, int maxHealth) {
+        super(name, health, maxHealth);
     }
 
     public int specialAttack(){

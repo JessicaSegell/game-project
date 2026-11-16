@@ -1,3 +1,5 @@
+package main;
+
 public enum FighterType {
     HERO("Hero"),
     ENEMY("Enemy");

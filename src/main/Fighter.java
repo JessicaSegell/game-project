@@ -1,13 +1,16 @@
-abstract class Fighter implements FighterActions {
+package main;
+
+
+public abstract class Fighter implements FighterActions {
     private String name;
     private int health;
-    //private int maxHealth;
-    private int attackPower;
 
-    public Fighter(String name, int health, int attackPower) {
+    private int maxHealth;
+
+    public Fighter(String name, int health, int maxHealth) {
         this.name = name;
         this.health = health;
-        this.attackPower = attackPower;
+        this.maxHealth = maxHealth;
     }
 
     public String getName() {
@@ -22,18 +25,25 @@ abstract class Fighter implements FighterActions {
         this.health = health;
     }
 
-    public int getAttackPower() {
-        return attackPower;
-    }
 
     public void takeDamage(int damage) {
         health = health - damage;
+        if (health < 0) {
+            health = 0;
+        }
+    }
+
+    public void heal(int healAmount){
+
+        health = health + healAmount;
+        if(health > maxHealth){
+            health = maxHealth;
+        }
     }
 
     public String getFighterInformation() {
         return getFighterType() + " : " + getName() +
                 " health: " + getHealth() +
-                " attack power: " + getAttackPower() +
                 " special attack: " + getSpecialAttack();
     }
 

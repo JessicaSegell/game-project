@@ -1,11 +1,17 @@
+package main;
+
 public class Enemy extends Fighter {
-    public Enemy(String name, int health, int attackPower) {
-        super(name, health, attackPower);
+    public Enemy(String name, int health, int maxHealth) {
+        super(name, health, maxHealth);
     }
 
     @Override
     public String getFighterType(){
         return FighterType.ENEMY.getFighterType();
+    }
+
+    public int specialAttack(){
+        return 20;
     }
 
     @Override
