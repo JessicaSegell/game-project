@@ -1,5 +1,7 @@
 package main;
 
+import javax.swing.*;
+
 public class BattleService {
 
     public void attack(Fighter attacker, Fighter defender){
@@ -12,6 +14,13 @@ public class BattleService {
         }
 
         printAttackResults(attacker, defender, damage);
+
+    }
+
+    public void enemyAttack(Fighter attacker, Fighter defender, int turnCount){
+        //attack
+        //var tredje runda spec
+
 
     }
 
@@ -38,6 +47,9 @@ public class BattleService {
     }
 
     private void printAttackResults(Fighter attacker, Fighter defender, int damage){
+
+        JOptionPane.showMessageDialog(null,
+                attacker.getName() + " dealt " + damage + " to " + defender.getName());
 
         System.out.println(attacker.getName() + " attacked " + defender.getName());
         System.out.println("Damage: " + damage);
